@@ -5,14 +5,14 @@
 [![Typed](https://img.shields.io/badge/typing-mypy-2A6DB2)](https://mypy-lang.org)
 [![Async](https://img.shields.io/badge/sync%20%2B%20async-httpx-5A45FF)](https://www.python-httpx.org)
 [![Ruff](https://img.shields.io/badge/lint-ruff-D7FF64?logo=ruff&logoColor=black)](https://docs.astral.sh/ruff)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/qiyascc/tapaz-python-sdk/blob/main/LICENSE)
 
 Typed Python client for tap.az. SMS code login, the category catalog with every property, ads, photos and the account's own ad list. Sync and async, with retry rules built so an ad is never posted twice.
 
 Unofficial. It talks to the same GraphQL API, photo service and login service as the tap.az website, as one signed in account.
 
 ```bash
-pip install git+https://github.com/qiyascc/tapaz-python-sdk.git
+pip install tapaz-python-sdk
 ```
 
 ## Sign in with an SMS code
@@ -121,12 +121,21 @@ Upload before creating the ad and pass the ids in `photo_ids`. A rotation return
 
 ## Config
 
-Pass values in code, or set `TAPAZ_COOKIE`, `TAPAZ_TIMEOUT`, `TAPAZ_MAX_RETRIES`, `TAPAZ_LOGIN_RETRIES`, `TAPAZ_DEFAULT_REGION`, `TAPAZ_USER_AGENT`, or put them in `tapaz.toml` ([example](examples/tapaz.toml)). Every address is a setting (`TAPAZ_GRAPHQL_URL`, `TAPAZ_PHOTOS_URL`, `TAPAZ_AUTH_URL`) and so is every path (`TAPAZ_ENDPOINTS__PHOTO_UPLOAD=...`). Messages live in `messages.yaml` and can be replaced with `messages.use(...)`. More in [examples](examples).
+Pass values in code, or set `TAPAZ_COOKIE`, `TAPAZ_TIMEOUT`, `TAPAZ_MAX_RETRIES`, `TAPAZ_LOGIN_RETRIES`, `TAPAZ_DEFAULT_REGION`, `TAPAZ_USER_AGENT`, or put them in `tapaz.toml` ([example](https://github.com/qiyascc/tapaz-python-sdk/blob/main/examples/tapaz.toml)). Every address is a setting (`TAPAZ_GRAPHQL_URL`, `TAPAZ_PHOTOS_URL`, `TAPAZ_AUTH_URL`) and so is every path (`TAPAZ_ENDPOINTS__PHOTO_UPLOAD=...`). Messages live in `messages.yaml` and can be replaced with `messages.use(...)`. More in [examples](https://github.com/qiyascc/tapaz-python-sdk/tree/main/examples).
 
 ## Develop
 
 ```bash
 pip install -e ".[dev]" && pytest && ruff check . && mypy src
 ```
+
+## Links
+
+- Source code: [github.com/qiyascc/tapaz-python-sdk](https://github.com/qiyascc/tapaz-python-sdk)
+- PyPI: [pypi.org/project/tapaz-python-sdk](https://pypi.org/project/tapaz-python-sdk/)
+- Project page: [theqiyas.cc/projects/tapaz-sdk](https://theqiyas.cc/projects/tapaz-sdk/)
+- Author: [Qiyas Sadıqov](https://theqiyas.cc), more projects at [theqiyas.cc](https://theqiyas.cc)
+
+## License
 
 MIT

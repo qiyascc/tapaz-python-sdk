@@ -1,0 +1,5 @@
+cookie = "_tapaz_session=your-session-cookie"
+timeout = 30
+max_retries = 2
+login_retries = 2
+default_region = "420"

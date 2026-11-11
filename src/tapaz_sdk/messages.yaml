@@ -1,0 +1,89 @@
+settings:
+  description: Settings for the tap.az client. Values come from code, TAPAZ_* environment variables or a config file.
+  cookie: Session cookie of a signed in tap.az account, as a Cookie header
+  site_url: Address of tap.az, used for links, Origin and Referer
+  graphql_url: Address of the tap.az GraphQL API
+  photos_url: Address of the tap.az photo service
+  auth_url: Address of the login service that sends and checks SMS codes
+  return_to: Address the login service signs the user into
+  endpoints: Path of every non GraphQL call
+  language: Language of messages from the login and photo services
+  source: Source sent with ad mutations
+  default_region: Region of new ads when none is given, 420 is Baku
+  delete_reason: Delete reason id preferred when an ad is deleted
+  timeout: Seconds to wait for an answer
+  connect_timeout: Seconds to wait for a connection
+  max_retries: Extra attempts for calls that are safe to repeat
+  login_retries: Extra attempts when the login service answers without a known error
+  backoff_base: First wait between retries, in seconds
+  backoff_cap: Longest wait between retries, in seconds
+  user_agent: User-Agent header
+  allow_insecure_http: Allow plain http addresses outside localhost, for a test server on a private network only
+
+value:
+  empty: "{field} cannot be empty"
+  too_long: "{field} is longer than {limit} characters"
+  range: "{field} must be a whole number from {low} to {high}, got {value!r}"
+  choice: "{field} must be one of {choices}, got {value!r}"
+  id: "{field} must be a tap.az id, got {value!r}"
+  phone: "'{value}' is not an Azerbaijani mobile number such as 050 123 45 67"
+  contact_phone: "'{value}' is not a phone number"
+  price: "price must be a number greater than zero, got {value!r}"
+  angle: "angle must be 90, 180 or 270, got {value!r}"
+  photo: "photo must be bytes, a path or a binary file, got {value!r}"
+
+ad:
+  invalid: "The ad is not valid for this category: {details}"
+  unknown_property: unknown property for this category
+  required: "'{name}' is required"
+  inactive: "'{name}' only applies when property {parent} has an option that enables it"
+  option_id: expected an option id
+  not_option: "'{value}' is not an option of '{name}' (valid: {valid})"
+  number: "'{name}' must be a number"
+  between: "'{name}' must be between {low} and {high}"
+  boolean: "'{name}' must be true or false"
+  text: "'{name}' must be non empty text"
+  unsupported: "unsupported property type {kind}"
+  price: price is required in this category
+  photos: at least one photo is required in this category
+  title: title is required in this category
+  leaf: "Category {category_id} has subcategories, use a leaf category"
+  unknown_category: "Unknown tap.az category {category_id}"
+  delete_reason: "{reason} is not a delete reason tap.az offers for ad {ad_id}"
+  phone: "tap.az needs a contact phone: pass phones or add a phone to the account"
+  email: "tap.az needs a contact email: pass email or add an email to the account"
+  no_delete: "tap.az offers no way to delete ad {ad_id}"
+  not_found: "Ad {ad_id} was not found"
+
+error:
+  base_url: "{field} must be an absolute http or https address, got {url}"
+  insecure: "Refusing to send the session over plain http to {url}. Use https, or set allow_insecure_http for a private test server."
+  no_session: Sign in first, or pass the cookie of a signed in tap.az account
+  session: tap.az does not accept the session, sign in again
+  connect: "Could not reach {host}, nothing was sent: {error}"
+  timeout: "{host} did not answer: {error}"
+  unknown_outcome: "The request may or may not have been carried out ({reason}). Check the account before trying again."
+  unknown_code: "The login service did not answer ({reason}). The SMS may or may not have been sent, wait for it before asking again."
+  unknown_verify: "The login service did not answer ({reason}). The code may already be used, ask for a new one if it is refused."
+  blocked: "{host} answered with a Cloudflare challenge page. This client does not solve challenges, try again later."
+  body: "{host} sent an answer that is not JSON: {body}"
+  status: "{host} answered with HTTP {status}"
+  refused: tap.az refused the request
+  graphql: "tap.az rejected the request: {details}"
+  mutation: "tap.az refused the change: {details}"
+  banned: "This tap.az account is banned: {details}"
+  unconfirmed: "The phone or email of this tap.az account is not confirmed: {details}"
+  login_service: "The login service did not answer after {attempts} attempts ({last})"
+  code_requests: "Too many code requests for this number, wait and try again {message}"
+  code_attempts: "Too many wrong codes, request a new code later {message}"
+  code_refused: "The code was not accepted {message}"
+  code_reused: "The code was not accepted {message}. It may have been used by an earlier attempt, request a new one."
+  phone_refused: "The login service did not send the code {message}"
+  no_token: The login service returned no access token
+  login_refused: "tap.az did not accept the login: {details}"
+  no_cookie: tap.az accepted the login but set no session cookie
+  photo_size: The photo is too large
+  photo_id: The photo service returned no photo id
+
+note:
+  retried_send: The login service answered only on a retry, so more than one SMS may arrive. Use the latest code.

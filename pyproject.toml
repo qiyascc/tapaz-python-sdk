@@ -33,6 +33,7 @@ dev = ["tapaz-python-sdk[toml,yaml]", "pytest>=7", "pytest-asyncio>=0.21", "ruff
 
 [project.urls]
 Homepage = "https://theqiyas.cc/projects/tapaz-sdk/"
+Documentation = "https://tapaz-python-sdk.readthedocs.io/"
 Source = "https://github.com/qiyascc/tapaz-python-sdk"
 Author = "https://theqiyas.cc"
 Issues = "https://github.com/qiyascc/tapaz-python-sdk/issues"

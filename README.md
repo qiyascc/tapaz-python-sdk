@@ -1,6 +1,7 @@
 # tapaz-python-sdk
 
 [![PyPI](https://img.shields.io/pypi/v/tapaz-python-sdk?color=3775A9&logo=pypi&logoColor=white)](https://pypi.org/project/tapaz-python-sdk/)
+[![Docs](https://readthedocs.org/projects/tapaz-python-sdk/badge/?version=latest)](https://tapaz-python-sdk.readthedocs.io/en/latest/)
 [![Python](https://img.shields.io/badge/python-3.10%20to%203.13-3776AB?logo=python&logoColor=white)](https://www.python.org)
 [![tap.az](https://img.shields.io/badge/site-tap.az%20GraphQL-FF6A00)](https://tap.az)
 [![Typed](https://img.shields.io/badge/typing-mypy-2A6DB2)](https://mypy-lang.org)
@@ -132,6 +133,7 @@ pip install -e ".[dev]" && pytest && ruff check . && mypy src
 
 ## Links
 
+- Documentation: [tapaz-python-sdk.readthedocs.io](https://tapaz-python-sdk.readthedocs.io/)
 - Source code: [github.com/qiyascc/tapaz-python-sdk](https://github.com/qiyascc/tapaz-python-sdk)
 - PyPI: [pypi.org/project/tapaz-python-sdk](https://pypi.org/project/tapaz-python-sdk/)
 - Project page: [theqiyas.cc/projects/tapaz-sdk](https://theqiyas.cc/projects/tapaz-sdk/)

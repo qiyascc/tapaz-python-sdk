@@ -4,10 +4,10 @@ tap.az Python SDK is a typed client for tap.az, the Azerbaijani classifieds site
 
 ## Author
 
-The SDK is written and maintained by **Qiyas Sadıqov**. More of his work, including the other libraries listed below, is on [theqiyas.cc](https://theqiyas.cc).
+The SDK is written and maintained by **Qiyas Sadıqov**. More of his work, including the other libraries listed below, is on [qiyas.cc](https://qiyas.cc).
 
-- Website: [theqiyas.cc](https://theqiyas.cc)
-- Project page: [theqiyas.cc/projects/tapaz-sdk](https://theqiyas.cc/projects/tapaz-sdk/)
+- Website: [qiyas.cc](https://qiyas.cc)
+- Project page: [qiyas.cc/projects/tapaz-sdk](https://qiyas.cc/projects/tapaz-sdk/)
 - GitHub: [github.com/qiyascc](https://github.com/qiyascc)
 
 ## Links
